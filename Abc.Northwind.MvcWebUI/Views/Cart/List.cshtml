@@ -1,0 +1,87 @@
+﻿@model Abc.Northwind.MvcWebUI.Models.CartListViewModel
+
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+<style type="text/css">.glyphicon { }
+
+ .glyphicon-shopping-cart { }
+</style>
+
+<h2>Your Cart</h2>
+
+
+<table class="table table-responsive">
+    <thead>
+        <tr>
+            <th scope="col">Product Name</th>
+            <th scope="col">Unit Price</th>
+            <th scope="col">Units In Stock</th>
+            <th scope="col">Quantity</th>
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in @Model.Cart.CartLines)
+        {
+            <tr>
+                <td>@item.Product.ProductName</td>
+                <td>@item.Product.UnitPrice</td>
+                <td>@item.Product.UnitsInStock</td>
+                <td>@item.Quantity</td>
+                <td>
+                    <a asp-controller="Cart" asp-action="Remove" class="btn btn-danger btn-icon-split"
+                        asp-route-productId="@item.Product.ProductId">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-trash"></i>
+                        </span>
+                        <span class="text">Remove</span>
+                    </a>
+                </td>
+            </tr>
+        }
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <h3>Total</h3>
+            </td>
+            <td class="text-right">
+                <h3>
+                    <strong>@Model.Cart.Total ₺</strong>
+                </h3>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <a asp-controller="Product" asp-action="Index" class="btn btn-secondary btn-icon-split">
+                    <span class="icon text-white-50">
+                        <i class="fas fa-arrow-right"></i>
+                    </span>
+                    <span class="text">Continue Shopping</span>
+                </a>
+            </td>
+            <td>
+               <a asp-controller="Cart" asp-action="Complete" class="btn btn-success btn-icon-split">
+                    <span class="icon text-white-50">
+                        <i class="fas fa-check"></i>
+                    </span>
+                    <span class="text">Go To Checkout</span>
+                </a>
+            </td>
+            
+            
+            
+            
+            
+
+        </tr>
+
+
+    </tbody>
+</table>

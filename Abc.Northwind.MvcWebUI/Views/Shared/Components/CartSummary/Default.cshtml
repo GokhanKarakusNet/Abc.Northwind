@@ -1,0 +1,31 @@
+﻿@model Abc.Northwind.MvcWebUI.Models.CartSummaryViewModel
+@*<ul class="dropdown-menu">
+@foreach (var item in Model.Cart.CartLines)
+{
+    <li>@item.Product.ProductName <span class="badge">@item.Quantity</span></li>
+}
+<li role="separator" class="divider"></li>
+<li>
+    <a><span class="glyphicon glyphicon-align-left glyphicon-shopping-cart" aria-hidden="true"></span>@Model.Cart.Total</a>
+</li>
+<li role="separator" class="divider"></li>
+<li>
+    <a asp-controller="Cart" asp-action="List">Go to cart details></a>
+</li>
+</ul>*@
+
+
+@foreach (var item in Model.Cart.CartLines)
+{
+    <a class="dropdown-item">
+        <i>@item.Product.ProductName <span class="badge">@item.Quantity</span></i>
+    </a>
+}
+<div class="dropdown-divider"></div>
+<a class="dropdown-item">
+    <i class="fas fa-lira-sign"> @Model.Cart.Total</i>
+</a>
+                        
+<div class="dropdown-divider"></div>
+
+    <a class ="dropdown-item" asp-controller="Cart" asp-action="List"><i class="fas fa-shopping-basket"> Go to cart details</i></a>

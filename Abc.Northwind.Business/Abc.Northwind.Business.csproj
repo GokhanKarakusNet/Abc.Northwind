@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Abc.Northwind.DataAccess\Abc.Northwind.DataAccess.csproj" />
+    <ProjectReference Include="..\Abc.Nortwind.Entities\Abc.Northwind.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

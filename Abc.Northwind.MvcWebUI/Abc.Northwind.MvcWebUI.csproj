@@ -1,0 +1,77 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\vendor\jquery-validation-unobtrusive\**" />
+    <Compile Remove="wwwroot\vendor\jquery-validation\**" />
+    <Content Remove="wwwroot\vendor\jquery-validation-unobtrusive\**" />
+    <Content Remove="wwwroot\vendor\jquery-validation\**" />
+    <EmbeddedResource Remove="wwwroot\vendor\jquery-validation-unobtrusive\**" />
+    <EmbeddedResource Remove="wwwroot\vendor\jquery-validation\**" />
+    <None Remove="wwwroot\vendor\jquery-validation-unobtrusive\**" />
+    <None Remove="wwwroot\vendor\jquery-validation\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="TagHelpers\PagingTagHelper.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\gege5\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap-grid.css" />
+    <Content Remove="C:\Users\gege5\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap-grid.css.map" />
+    <Content Remove="C:\Users\gege5\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap-grid.min.css" />
+    <Content Remove="C:\Users\gege5\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap-grid.min.css.map" />
+    <Content Remove="C:\Users\gege5\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap-reboot.css" />
+    <Content Remove="C:\Users\gege5\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap-reboot.css.map" />
+    <Content Remove="C:\Users\gege5\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap-reboot.min.css" />
+    <Content Remove="C:\Users\gege5\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap-reboot.min.css.map" />
+    <Content Remove="C:\Users\gege5\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap-utilities.css" />
+    <Content Remove="C:\Users\gege5\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap-utilities.css.map" />
+    <Content Remove="C:\Users\gege5\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap-utilities.min.css" />
+    <Content Remove="C:\Users\gege5\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap-utilities.min.css.map" />
+    <Content Remove="C:\Users\gege5\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap.css" />
+    <Content Remove="C:\Users\gege5\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap.css.map" />
+    <Content Remove="C:\Users\gege5\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap.min.css" />
+    <Content Remove="C:\Users\gege5\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\css\bootstrap.min.css.map" />
+    <Content Remove="C:\Users\gege5\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\js\bootstrap.bundle.js" />
+    <Content Remove="C:\Users\gege5\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\js\bootstrap.bundle.js.map" />
+    <Content Remove="C:\Users\gege5\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\js\bootstrap.bundle.min.js" />
+    <Content Remove="C:\Users\gege5\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\js\bootstrap.bundle.min.js.map" />
+    <Content Remove="C:\Users\gege5\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\js\bootstrap.esm.js" />
+    <Content Remove="C:\Users\gege5\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\js\bootstrap.esm.js.map" />
+    <Content Remove="C:\Users\gege5\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\js\bootstrap.esm.min.js" />
+    <Content Remove="C:\Users\gege5\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\js\bootstrap.esm.min.js.map" />
+    <Content Remove="C:\Users\gege5\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\js\bootstrap.js" />
+    <Content Remove="C:\Users\gege5\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\js\bootstrap.js.map" />
+    <Content Remove="C:\Users\gege5\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\js\bootstrap.min.js" />
+    <Content Remove="C:\Users\gege5\.nuget\packages\bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\js\bootstrap.min.js.map" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="TagHelpers\PagingTagHelper.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Abc.Northwind.Business\Abc.Northwind.Business.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.0-preview.1.21103.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.0-preview.1.21102.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+    <PackageReference Include="PagedList.Core.Mvc" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages\Components\" />
+    <Folder Include="Views\Shared\Components\UserSummary\" />
+  </ItemGroup>
+
+</Project>
